@@ -8,13 +8,16 @@
    Sebagai respon terhadap tantangan tersebut, perusahaan memutuskan untuk mengembangkan sistem monitoring kelayakan air terintegrasi. Salah satu komponen yang perlu dikembangkan adalah Water Potability Classifier berbasis Machine Learning. Komponen ini dirancang untuk membantu meningkatkan kinerja perusahaan dalam mengolah multi-parameter kualitas air (fisik, kimia, dan biologis) secara simultan dan menghasilkan klasifikasi potabilitas air secara cepat dan sistematis.
 
 ## Rumusan Masalah
-   1) Dataset seperti apa yang cocok digunakan untuk pengembangan model klasifikasi potabilitas air?
+   1) Dataset seperti apa yang cocok digunakan untuk pengembangan baseline model klasifikasi potabilitas air?
    2) Bagaimana cara mengembangkan baseline model machine learning untuk klasifikasi potabilitas air?
+
+## Tujuan
+   Pembuatan baseline model yang akan menjadi model dasar pengembangan sistem monitoring kelayakan (potabilitas) air terintegrasi.
 
 ## Ketersediaan Sumber Daya
 ### Dataset
 Dataset yang digunakan ...
-Sumber: [Link]()
+Sumber: [Lihat](https://www.kaggle.com/datasets/adityakadiwal/water-potability)
 
 ### Tools
 * VS Code
