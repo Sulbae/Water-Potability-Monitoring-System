@@ -33,13 +33,7 @@ Dataset yang digunakan adalah water_potability.csv (dataset publik yang tersedia
 Sumber: [Lihat](https://www.kaggle.com/datasets/adityakadiwal/water-potability)
 
 ### Tools
-* VS Code
-* GitHub
-* TensorFlow
-* DagsHub
-* Docker
-* Prometheus
-* Grafana
+- VS Code - GitHub - TensorFlow - DagsHub - Docker - Streamlit - Prometheus - Grafana
 
 ## Pengolahan Data
 ### Eksplorasi Data
