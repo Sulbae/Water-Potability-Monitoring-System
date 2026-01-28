@@ -66,10 +66,6 @@ def preprocess_data() -> None:
     clf_X_test_preprocessed = pd.DataFrame(clf_X_test_preprocessed, columns=clf_X_test.columns)
     clf_test_preprocessed = pd.concat([clf_X_test_preprocessed, clf_y_test.reset_index(drop=True)], axis=1)
 
-    ## save clf preprocessed data
-    clf_train_preprocessed.to_csv('../preprocessing/clf_train_preprocessed.csv', index=False)
-    clf_test_preprocessed.to_csv('../preprocessing/clf_test.csv', index=False)
-
     # Preprocess Anomaly Detection Data
     preprocess_anom = preprocessing_pipeline_schema()
     ## Train
@@ -79,14 +75,23 @@ def preprocess_data() -> None:
     anom_test_preprocessed = preprocess_anom.transform(anom_test)
     anom_test_preprocessed = pd.DataFrame(anom_test_preprocessed, columns=anom_test.columns)
 
+    # Export Preprocessed Data
+    preprocessing_dir = BASE_DIR / 'preprocessing'
+    os.makedirs(preprocessing_dir, exist_ok=True)
+    ## save clf preprocessed data
+    clf_train_preprocessed.to_csv(preprocessing_dir / 'clf_train_preprocessed.csv', index=False)
+    clf_test_preprocessed.to_csv(preprocessing_dir / 'clf_test.csv', index=False)
     ## save anom preprocessed data
-    anom_train_preprocessed.to_csv('../preprocessing/anom_train_preprocessed.csv', index=False)
-    anom_test_preprocessed.to_csv('../preprocessing/anom_test.csv', index=False)
-    
+    anom_train_preprocessed.to_csv(preprocessing_dir / 'anom_train_preprocessed.csv', index=False)
+    anom_test_preprocessed.to_csv(preprocessing_dir / 'anom_test.csv', index=False)
+
+    # Export Preprocessing Pipelines
+    artifacts_dir = BASE_DIR / 'artifacts'
+    os.makedirs(artifacts_dir, exist_ok=True)
+    dump(preprocess_clf, artifacts_dir / 'preprocessing_pipeline_clf.pkl')
+    dump(preprocess_anom, artifacts_dir / 'preprocessing_pipeline_anom.pkl')
+
     # End
-    dump(preprocess_clf, "../artifacts/preprocessing_pipeline_clf.pkl")
-    dump(preprocess_anom, "../artifacts/preprocessing_pipeline_anom.pkl")
-    
     logging.info("Preprocessing selesai dan data telah disimpan.")
 
 if __name__ == "__main__":
