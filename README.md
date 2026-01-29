@@ -15,8 +15,7 @@ Pengembangan tahap awal, yaitu:
    1) membuat model **klasifikasi potabilitas air**,
    2) membuat model **deteksi anomali kualitas air**.
 
-## Ketersediaan Sumber Daya
-### Dataset
+## Dataset Overview
 Dataset yang digunakan adalah water_potability.csv (dataset publik yang tersedia di platform Kaggle) yang berisi data metrik kualitas air dari 3276 badan air yang berbeda. Fitur-fitur yang tersedia dalam dataset ditampilkan pada Tabel 1.
 | No | Nama | Tipe Data | Deskripsi |
 |----|------|-----------|-----------|
@@ -33,27 +32,34 @@ Dataset yang digunakan adalah water_potability.csv (dataset publik yang tersedia
 
 Sumber: [Lihat](https://www.kaggle.com/datasets/adityakadiwal/water-potability)
 
-### Tools
-- VS Code - GitHub - MLFlow - DagsHub - Docker - Streamlit - Prometheus - Grafana
+## Data Preparation
+### Data Assessment
 
-## Pengolahan Data
-### Eksplorasi Data
+### Data Cleaning
 
-### Persiapan Data
+### Data Exploration
+1) Cek Distribusi Data Fitur
+   ![cek-distribusi-data](https://github.com/Sulbae/Water-Potability-Assessment/blob/708e8b6e1cb1403bfcd9e2c81d2ae869b7c9da90/assets/EDA/Distribusi%20Data%20Fitur.png)
+
+3) Cek Distribusi Data Target
+
+4) Cek Outlier
+   
+5) Cek Korelasi
+   
+### Data Preprocessing
 
 ## Pengembangan Model
-### Desain Arsitektur
+### Classifier Model
 
-### Pelatihan
+### Anomali Detection Model
 
-### Evaluasi
+### Model Evaluation
 
 ## Realisasi
 ### Deployment
 
 ### Inference
-
-## Monitoring
 
 ## Referensi
 [1] Ekowati, A. P., & Lusno, M. F. D . Analisis Capaian dan Tantangan Akses Air Minum Aman di Indonesia Menuju SDGS 6.1.1 . Jurnal Penelitian Inovatif, 5(2), 1707–1714. (2025). https://doi.org/10.54082/jupin.1538
