@@ -38,14 +38,14 @@ Sumber: [Lihat](https://www.kaggle.com/datasets/adityakadiwal/water-potability)
 ### Data Cleaning
 
 ### Data Exploration
-1) Cek Distribusi Data Fitur
-   ![cek-distribusi-data](https://github.com/Sulbae/Water-Potability-Assessment/blob/708e8b6e1cb1403bfcd9e2c81d2ae869b7c9da90/assets/EDA/Distribusi%20Data%20Fitur.png)
+1) Cek Distribusi Data
+   ![histogram-distribusi-data](https://github.com/Sulbae/Water-Potability-Assessment/blob/708e8b6e1cb1403bfcd9e2c81d2ae869b7c9da90/assets/EDA/Distribusi%20Data%20Fitur.png)
 
-3) Cek Distribusi Data Target
-
-4) Cek Outlier
+2) Cek Outlier
+   ![boxplot-outlier](https://github.com/Sulbae/Water-Potability-Assessment/blob/c6bf27c09814fc2e0b5e308ef1b01dd6a54a933b/assets/EDA/Outlier.png)
    
-5) Cek Korelasi
+3) Cek Korelasi
+   ![heatmap-korelasi](https://github.com/Sulbae/Water-Potability-Assessment/blob/c6bf27c09814fc2e0b5e308ef1b01dd6a54a933b/assets/EDA/heatmap%20korelasi.png)
    
 ### Data Preprocessing
 
