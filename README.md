@@ -15,8 +15,7 @@ Pengembangan tahap awal, yaitu:
    1) membuat model **klasifikasi potabilitas air**,
    2) membuat model **deteksi anomali kualitas air**.
 
-## Ketersediaan Sumber Daya
-### Dataset
+## Dataset Overview
 Dataset yang digunakan adalah water_potability.csv (dataset publik yang tersedia di platform Kaggle) yang berisi data metrik kualitas air dari 3276 badan air yang berbeda. Fitur-fitur yang tersedia dalam dataset ditampilkan pada Tabel 1.
 | No | Nama | Tipe Data | Deskripsi |
 |----|------|-----------|-----------|
@@ -33,27 +32,67 @@ Dataset yang digunakan adalah water_potability.csv (dataset publik yang tersedia
 
 Sumber: [Lihat](https://www.kaggle.com/datasets/adityakadiwal/water-potability)
 
-### Tools
-- VS Code - GitHub - MLFlow - DagsHub - Docker - Streamlit - Prometheus - Grafana
+## Data Preparation
+### Data Assessment
+Dari total 3276 baris data, ditemukan sebanyak **1434** nilai null/missing value pada dataset. Sementara itu, hasil pemeriksaan menunjukkan tidak ada duplikasi data pada dataset.
 
-## Pengolahan Data
-### Eksplorasi Data
+### Data Cleaning
+#### Missing Value Handling
+Nilai null/minssing value pada dataset ditemukan pada 3 variabel (dalam hal ini data parameter kualitas air) yaitu pH (491 null), Sulfate (781 null), dan Trihalomethanes (162 null). Untuk mengatasi kekosongan data ini, maka dilakukan imputasi data menggunakan nilai median untuk menjaga struktur distribusi data. 
 
-### Persiapan Data
+### Data Exploration
+#### 1) Cek Distribusi Data
+   ![histogram-distribusi-data](https://github.com/Sulbae/Water-Potability-Assessment/blob/708e8b6e1cb1403bfcd9e2c81d2ae869b7c9da90/assets/EDA/Distribusi%20Data%20Fitur.png)
+
+#### 2) Cek Outlier
+   ![boxplot-outlier](https://github.com/Sulbae/Water-Potability-Assessment/blob/c6bf27c09814fc2e0b5e308ef1b01dd6a54a933b/assets/EDA/Outlier.png)
+   
+#### 3) Cek Korelasi
+   ![heatmap-korelasi](https://github.com/Sulbae/Water-Potability-Assessment/blob/c6bf27c09814fc2e0b5e308ef1b01dd6a54a933b/assets/EDA/heatmap%20korelasi.png)
+   
+### Data Preprocessing
+#### Preprocessing Pipeline
+#### 1) Classifier Model
+..data split
+..standarisasi
+
+#### 2) Anomali Detection Model
+..data split
+..standarisasi
 
 ## Pengembangan Model
-### Desain Arsitektur
+### 1) Classifier Model
+#### Algorithm
+RandomForestClassifier()
+..jelaskan konsep kerja
+..kelebihan
+..kekurangan
 
-### Pelatihan
+#### Training
+..hyperparameter tuning
 
-### Evaluasi
+#### Evaluation
+..classification report
+..confusion matrix
+
+### 2) Anomali Detection Model
+#### Algorithm
+IsolationForest()
+..jelaskan konsep kerja
+..kelebihan
+..kekurangan
+
+#### Training
+..hyperparameter tuning
+
+#### Evaluation
+..classification report
+..confusion matrix
 
 ## Realisasi
 ### Deployment
 
 ### Inference
-
-## Monitoring
 
 ## Referensi
 [1] Ekowati, A. P., & Lusno, M. F. D . Analisis Capaian dan Tantangan Akses Air Minum Aman di Indonesia Menuju SDGS 6.1.1 . Jurnal Penelitian Inovatif, 5(2), 1707–1714. (2025). https://doi.org/10.54082/jupin.1538
