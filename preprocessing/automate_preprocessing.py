@@ -33,7 +33,7 @@ def preprocess_data() -> None:
     )
 
     # Anomali Detection Data
-    anom_data = data[data['Potability'] == 1]
+    anom_data = data[data['Potability'] == 0]
     anom_X = anom_data.drop(columns=['Potability'])
     anom_train, anom_test = train_test_split(
         anom_X,
