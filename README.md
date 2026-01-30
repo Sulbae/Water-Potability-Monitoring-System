@@ -8,7 +8,8 @@
    Sebagai respon terhadap tantangan tersebut, perusahaan memutuskan untuk mengembangkan sistem monitoring kelayakan air terintegrasi. Salah satu komponen yang perlu dikembangkan adalah Water Potability Classifier berbasis Machine Learning. Komponen ini dirancang untuk membantu meningkatkan kinerja perusahaan dalam mengolah multi-parameter kualitas air (fisik, kimia, dan biologis) secara simultan dan menghasilkan klasifikasi potabilitas air secara cepat dan sistematis.
 
 ## Objective
-* Mengembangkan model machine learning untuk monitoring potabilitas/kelayakan air berdasarkan data hasil uji lab kualitas air yang dimiliki perusahaan. Bagaimana cara mengembangkan baseline model machine learning untuk klasifikasi potabilitas air?
+* Mengembangkan model machine learning untuk monitoring potabilitas/kelayakan air berdasarkan data hasil uji lab kualitas air yang dimiliki perusahaan.
+![system_workflow](https://github.com/Sulbae/Water-Potability-Assessment/blob/12627c4d22f192855a8c9aa3d11d88a0525961e2/assets/workflow/system%20workflow.png)
 
 ## Scope
 Pengembangan tahap awal, yaitu: 
