@@ -275,6 +275,10 @@ Konfigurasi Parameter:
 * Dari **400 sampel air tidak layak**, sebanyak **22 sampel** terdeteksi memiliki distribusi data parameter yang **tidak wajar**.
 * Dari **256 sampel air layak**, sebanyak **19 sampel** terdeteksi memiliki distribusi data parameter yang **tidak wajar**.
 
+## **Risk Assessment**
+
+![risk_assessment](https://github.com/Sulbae/Water-Potability-Assessment/blob/78c3343ebf28eb0ef9537c4b0b8ece03f0acbf4f/assets/inference/risk%20assessment.png)
+
 ## **Inference**
 
 ![inferenc-platform](https://github.com/Sulbae/Water-Potability-Assessment/blob/2f328b45c14f4cb1de6014b27bbbec3dde8e619a/assets/inference/inference_streamlit_1.png)
