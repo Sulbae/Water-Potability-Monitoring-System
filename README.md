@@ -18,8 +18,8 @@
     - [Data Exploration](#Data-Exploration)
     - [Data Preprocessing](#Data-Preprocessing)
   - [Model Development](#Model-Development)
-    - [1) Classifier Model](#1\)Classifier-Model)
-    - [2) Anomali Detection Model](#2\)Anomali-Detection-Model)
+    - [Classifier Model](#Classifier-Model)
+    - [Anomali Detection Model](#Anomaly-Detection-Model)
   - [Inference](#Inference)
   - [Conclusion](#Conclusion)
   - [Project Evaluation & Future Improvement](#Project-Evaluation-&-Future-Improvement)
@@ -108,7 +108,7 @@ Keterangan:
 - σ = standar deviasi fitur 
 
 ## Model Development
-### 1) Classifier Model
+### Classifier Model
 #### Algorithm
 `RandomForestClassifier()` merupakan algoritma yang bekerja dengan menggabungkan banyak pohon keputusan (_decision tree_) yang akan menentukan hasil klasifikasi berdasarkan suara terbanyak.
 
@@ -187,7 +187,7 @@ Dalam pengembangan model klasifikasi Potabilitas Air ini, ditetapkan _threshold_
 ![confusion-matrix-klasifikasi](https://github.com/Sulbae/Water-Potability-Assessment/blob/b71b4c59d13bb7115507a260949fb846bdf4147f/assets/model%20evaluation/confusion%20matrix%20classifier%20th-0.69.png)
 * Menetapkan threshold klasifikasi = 0.69, sehingga model dapat bekerja lebih ketat dan tidak meloloskan air tidak layak dengan mudah. Hal ini dilakukan untuk menjamin keamanan/kesehatan pengguna.
 
-### 2) Anomali Detection Model
+### Anomaly Detection Model
 #### Algorithm
 `IsolationForest()` merupakan algoritma yang dapat mendeteksi data tidak normal dengan cara mengisolasi data tersebut. Data anomali lebih mudah dipisahkan daripada data normal sehingga data yang cepat terisolasi dapat dianggap anomali.
 
