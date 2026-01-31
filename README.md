@@ -93,6 +93,7 @@ Kekurangan:
    - Digunakan ketika ingin keduanya memiliki bobot yang seimbang.
 
 ##### Hasil Evaluasi
+Dalam pengembangan model klasifikasi Potabilitas Air ini, ditetapkan _threshold_ probabilitas prediksi sebesar **0.69** sehingga model akan lebih ketat dalam mengkategorikan air yang tidak layak.
 
 1) Classification Report
 
