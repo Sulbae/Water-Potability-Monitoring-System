@@ -98,6 +98,13 @@ Kekurangan:
 
 ![classification-report](https://github.com/Sulbae/Water-Potability-Assessment/blob/a688f27c024d4cac6c3b565ab8b2169274eccd07/assets/model%20evaluation/classification%20report.png)
 
+* Precision
+  - Dari semua sampel yang diprediksi tidak layak, 62% memang benar tidak layak.
+  - Semua sampel yang diprediksi layak memang benar layak.
+
+* Recall
+  - Dari semua air yang sebenarnya tidak layak, 100% berhasil terdeteksi.
+  - Dari semua sampel yang sebenarnya layak, hanya 5% yang berhasil dikenali.
 
 2) Confusion Matrix
 
