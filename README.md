@@ -95,10 +95,12 @@ Kekurangan:
 ##### Hasil Evaluasi
 
 1) Classification Report
+
 ![classification-report](https://github.com/Sulbae/Water-Potability-Assessment/blob/a688f27c024d4cac6c3b565ab8b2169274eccd07/assets/model%20evaluation/classification%20report.png)
 
 
 2) Confusion Matrix
+
 ![confusion-matrix-klasifikasi](https://github.com/Sulbae/Water-Potability-Assessment/blob/b71b4c59d13bb7115507a260949fb846bdf4147f/assets/model%20evaluation/confusion%20matrix%20classifier%20th-0.69.png)
 * Menetapkan threshold klasifikasi = 0.69, sehingga model dapat bekerja lebih ketat dan tidak meloloskan air tidak layak dengan mudah. Hal ini dilakukan untuk menjamin keamanan/kesehatan pengguna.
 
