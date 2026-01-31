@@ -203,8 +203,9 @@ $$
 Dalam pengembangan model klasifikasi Potabilitas Air ini, ditetapkan _threshold_ probabilitas prediksi sebesar **0.69** sehingga model akan lebih ketat dalam mengkategorikan air yang tidak layak.
 
 1) Classification Report
-
+$$
 ![classification-report](https://github.com/Sulbae/Water-Potability-Assessment/blob/a688f27c024d4cac6c3b565ab8b2169274eccd07/assets/model%20evaluation/classification%20report.png)
+$$
 
 * Precision
   - Dari semua sampel yang diprediksi tidak layak, **62%** memang benar tidak layak.
