@@ -32,10 +32,10 @@
    
    Sejalan dengan itu, ADEM Indonesia (perusahaan fiktif), sebagai sebuah perusahaan layanan penyediaan air minum (SPAM) akan memiliki peran serta dalam merealisasikan program tersebut. Dengan demikian, perushaan memiliki tanggung jawab untuk memastikan bahwa air yang didistribusikan kepada masyarakat telah memenuhi standar kualitas, keamanan, dan kesehatan secara konsisten, akurat, dan berkelanjutan. Penggunaan sumber air baku yang berasal dari sungai, waduk, danau, dan air tanah, tentu memiliki tingkat kontaminasi yang berbeda-beda, baik secara fisik, kimia, maupun biologis. Hal ini menjadi tantangan yang paling sering dihadapi dalam operasional pengolahan air. Ditambah lagi perubahan musim, limpasan limbah domestik, aktivitas industri, dan degradasi kualitas lingkungan memperbesar risiko fluktuasi kualitas air.
    
-   Sebagai respon terhadap tantangan tersebut, perusahaan memutuskan untuk mengembangkan sistem monitoring kelayakan air terintegrasi. Salah satu komponen yang perlu dikembangkan adalah Water Potability Classifier berbasis Machine Learning. Komponen ini dirancang untuk membantu meningkatkan kinerja perusahaan dalam mengolah multi-parameter kualitas air (fisik, kimia, dan biologis) secara simultan dan menghasilkan klasifikasi potabilitas air secara cepat dan sistematis.
+   Sebagai respon terhadap tantangan tersebut, perusahaan memutuskan untuk mengembangkan sistem monitoring kelayakan air terintegrasi. Salah satu komponen yang perlu dikembangkan adalah Water Potability Risk Assessment System. Komponen ini dirancang untuk membantu meningkatkan kinerja perusahaan dalam menganalisis data hasil uji multi-parameter kualitas air (fisik, kimia, dan biologis) secara simultan dan menghasilkan rekomendasi lanjutan terhadap hasil analisis.
 
 ## Objective
-* Mengembangkan model machine learning untuk monitoring potabilitas/kelayakan air berdasarkan data hasil uji lab kualitas air yang dimiliki perusahaan.
+* Mengembangkan alat bantu (tools) assessment potabilitas/kelayakan air berbasis data lab statik yang dimiliki perusahaan.
 ![system_workflow](https://github.com/Sulbae/Water-Potability-Assessment/blob/12627c4d22f192855a8c9aa3d11d88a0525961e2/assets/workflow/system%20workflow.png)
 
 ## Scope
