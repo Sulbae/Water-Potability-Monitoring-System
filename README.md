@@ -69,7 +69,17 @@ Berdasarkan hasil temuan dari eksplorasi data, maka dilakukan Preprocessing Data
    
 3) Scaling
 
-   Standarisasi nilai skala dilakukan untuk menyeragamkan rentang data seluruh parameter sehingga data memiliki rentang yang tidak terlalu berbeda signifikan. Hal ini dilakukan untuk mencegah bias dari pelatihan model deteksi anomali karena model deteksi anomali sangat sensitif terhadap nilai yang berbeda signifikan. 
+   Standarisasi nilai skala dilakukan untuk menyeragamkan rentang data seluruh parameter (pada data pelatihan) sehingga data memiliki rentang yang tidak terlalu berbeda signifikan. Hal ini dilakukan untuk mencegah bias dari pelatihan model deteksi anomali karena model deteksi anomali sensitif terhadap nilai/skala fitur.
+
+   `StandardScaler` dipilih sebagai scaler karena distribusi seluruh data parameter kualitas air sudah normal/mendekati normal. scaler ini bekerja dengan melakukan transformasi nilai data agar memiliki rata-rata **(_mean_) = 0** dan **simpangan baku (_standar deviasi_) = 1**. Secara matematis, setiap nilai fitur ditransformasikan seperti berikut:
+
+\[
+x_{scaled} = \frac{x - \mu}{\sigma}
+\]
+   
+Keterangan:
+- μ = mean (nilai rata-rata) fitur 
+- σ = standar deviasi fitur 
 
 ## Pengembangan Model
 ### 1) Classifier Model
