@@ -133,17 +133,20 @@ Kekurangan
 
 #### Evaluation
 1) Anomali Rate & Score
+
 ![anomali-score-distribution](https://github.com/Sulbae/Water-Potability-Assessment/blob/2f328b45c14f4cb1de6014b27bbbec3dde8e619a/assets/model%20evaluation/distribusi%20skor%20anomali.png)
 * Setelah diuji terhadap data Test, diketahui model memiliki Anomaly Rate sebesar 6,25%.
 * Kemudian, berdasarkan histogram terlihat bahwa distribusi melebar ⟶ model dapat membedakan data normal vs anomali.
 
 2) Confusion matrix
+
 ![confusion-matrix-deteksi-anomali](https://github.com/Sulbae/Water-Potability-Assessment/blob/b71b4c59d13bb7115507a260949fb846bdf4147f/assets/model%20evaluation/confusion%20matrix%20anomali%20detection.png)
 
 * Dari 400 sampel air tidak layak, sebanyak 22 sampel terdeteksi memiliki distribusi data parameter yang tidak wajar.
 * Dari 256 sampel air layak, sebanyak 19 sampel terdeteksi memiliki distribusi data parameter yang tidak wajar.
 
 ## Inference
+
 ![inferenc-platform](https://github.com/Sulbae/Water-Potability-Assessment/blob/2f328b45c14f4cb1de6014b27bbbec3dde8e619a/assets/inference/inference_streamlit_1.png)
 
 Streamlit UI digunakan sebagai platform penerima input data dalam bentuk formulir yang dapat diisi secara manual.
