@@ -146,10 +146,10 @@ Kekurangan:
 Pelatihan dilakukan menggunakan `GridSearch()` sehingga dapat melakukan hyperparameter tuning sekaligus dan menghasilkan _best_model_ dengan _best_parameter_. Metrik skor yang digunakan yaitu precision, recall, dan F1-score.
 
 Konfigurasi Parameter:
-`N_ESTIMATORS_RANGE = np.linspace(10, 100, 3, dtype=int)`
-`MAX_DEPTH_RANGE = np.linspace(1, 50, 3, dtype=int)`
-`MIN_SAMPLES_LEAF = np.linspace(1, 10, 3, dtype=int)`
-`MIN_SAMPLES_SPLIT = np.linspace(2, 10, 3, dtype=int)`
+- `N_ESTIMATORS_RANGE = np.linspace(10, 100, 3, dtype=int)`
+- `MAX_DEPTH_RANGE = np.linspace(1, 50, 3, dtype=int)`
+- `MIN_SAMPLES_LEAF = np.linspace(1, 10, 3, dtype=int)`
+- `MIN_SAMPLES_SPLIT = np.linspace(2, 10, 3, dtype=int)`
 
 Best Parameter:
 - n_estimators = **100**
