@@ -53,46 +53,98 @@ Nilai null/minssing value pada dataset ditemukan pada 3 variabel (dalam hal ini 
    
 ### Data Preprocessing
 #### Preprocessing Pipeline
-#### 1) Classifier Model
-..data split
-..standarisasi
-
-#### 2) Anomali Detection Model
-..data split
-..standarisasi
+![preprocessing-pipeline](https://github.com/Sulbae/Water-Potability-Assessment/blob/b71b4c59d13bb7115507a260949fb846bdf4147f/assets/workflow/preprocessing_pipeline.png)
 
 ## Pengembangan Model
 ### 1) Classifier Model
 #### Algorithm
 RandomForestClassifier()
 ..jelaskan konsep kerja
+Gabungan banyak pohon keputusan (decision tree) yang akan menentukan hasil klasifikasi berdasarkan suara terbanyak.
+
 ..kelebihan
+* Akurasi & Stabilitas tinggi
+* Mampu menangkap hubungan non-linear
+* Tidak sensitif terhadap perbedaan skala fitur
+* Relatif tahan terhadap outlier
+
 ..kekurangan
+* Model cenderung sulit diinterpretasikan secara detail.
+* Waktu training dan inferensi lebih lambat dibanding model sederhana.
+* Kurang cocok untuk kebutuhan analisis real-time dengan latensi rendah.
+* Jika terlalu kompleks, ukuran model besar dan boros memori.
 
 #### Training
 ..hyperparameter tuning
 
 #### Evaluation
+..metrik evaluasi
+* Precision: Tingkat ketepatan prediksi positif yang dibuat model.
+
+* Recall: Tingkat keberhasilan model dalam mendeteksi seluruh data positif yang sebenarnya.
+
+* F1-Score: 
+   - Metrik yang menggabungkan precision dan recall. 
+   - Digunakan ketika ingin keduanya memiliki bobot yang seimbang.
+..hasil evaluasi
 ..classification report
+![classification-report](https://github.com/Sulbae/Water-Potability-Assessment/blob/a688f27c024d4cac6c3b565ab8b2169274eccd07/assets/model%20evaluation/classification%20report.png)
+
 ..confusion matrix
+![confusion-matrix-klasifikasi](https://github.com/Sulbae/Water-Potability-Assessment/blob/b71b4c59d13bb7115507a260949fb846bdf4147f/assets/model%20evaluation/confusion%20matrix%20classifier%20th-0.69.png)
+* Menetapkan threshold klasifikasi = 0.69, sehingga model dapat bekerja lebih ketat dan tidak meloloskan air tidak layak dengan mudah. Hal ini dilakukan untuk menjamin keamanan/kesehatan pengguna.
 
 ### 2) Anomali Detection Model
 #### Algorithm
 IsolationForest()
 ..jelaskan konsep kerja
+Algoritma ini dapat mendeteksi data tidak normal dengan cara mengisolasi data tersebut. Data anomali lebih mudah dipisahkan daripada data normal sehingga data yang cepat terisolasi dapat dianggap anomali.
+
 ..kelebihan
+* Tidak perlu data anomali berlabel
+* Skalabel untuk dataset besar
+* Relatif tahan terhadap noise
+* Tidak bergantung pada distribusi data
+
 ..kekurangan
+* Perlu post-analysis (penjelasan mengapa anomali terjadi)
+* Sensitif terhadap parameter contamination
+* Tidak cocok sebagai classifier, hanya sebagai pelengkap
 
 #### Training
-..hyperparameter tuning
+...parameter
 
 #### Evaluation
-..classification report
+..anomali rate & score
+![anomali-score-distribution](https://github.com/Sulbae/Water-Potability-Assessment/blob/2f328b45c14f4cb1de6014b27bbbec3dde8e619a/assets/model%20evaluation/distribusi%20skor%20anomali.png)
+
 ..confusion matrix
+![confusion-matrix-deteksi-anomali](https://github.com/Sulbae/Water-Potability-Assessment/blob/b71b4c59d13bb7115507a260949fb846bdf4147f/assets/model%20evaluation/confusion%20matrix%20anomali%20detection.png)
+
+* Dari 400 sampel air tidak layak, sebanyak 22 sampel terdeteksi memiliki distribusi data parameter yang tidak wajar.
+* Dari 256 sampel air layak, sebanyak 19 sampel terdeteksi memiliki distribusi data parameter yang tidak wajar.
 
 ## Inference
+![inferenc-platform](https://github.com/Sulbae/Water-Potability-Assessment/blob/2f328b45c14f4cb1de6014b27bbbec3dde8e619a/assets/inference/inference_streamlit_1.png)
 
+Streamlit UI digunakan sebagai platform penerima input data dalam bentuk formulir yang dapat diisi secara manual.
 App: [Coba App](https://water-potability-assessment.streamlit.app/)
+
+## Conclusion
+Water Potability Risk Assessment System berhasil mengimplementasikan pendekatan machine learning dengan kombinasi antara supervised classification dan semi-supervised anomaly detection. Dan mampu memberikan hasil analisis risk level serta rekomendasi berdasarkan data masukkan (input) melalui formulir yang dibuat menggunakan streamlit UI.
+
+* Catatan:
+  - Sistem Risk Assessment yang telah dikembangkan tidak berperan sebagai pengganti uji analisis laboratorium, melainkan sebagai alat bantu (tools) untuk mempermudah analisis lanjutan.
+  - Input manual pada streamlit UI sering kali berbeda dengan distribusi data pada pelatihan model, sehingga lebih mudah terdeteksi sebagai anomali.
+
+## Project Evaluation & Future Improvement
+- Kalibrasi Threshold
+  * Threshold potabilitas saat ini masih bersifat statis sehingga perlu dipantau secara berkala.
+  * Pengembangan selanjutnya dapat dipertimbangkan implementasi threshold yang lebih adaptif dan disesuaikan dengan regulasi resmi.
+
+- Analisis Penyebab Anomali
+  * Saat ini output analisis hanya menampilkan risk level & rekomendasi.
+  * Analisis dapat dikembangkan lebih detail seperti analisis parameter penyebab anomali. 
 
 ## Referensi
 [1] Ekowati, A. P., & Lusno, M. F. D . Analisis Capaian dan Tantangan Akses Air Minum Aman di Indonesia Menuju SDGS 6.1.1 . Jurnal Penelitian Inovatif, 5(2), 1707–1714. (2025). https://doi.org/10.54082/jupin.1538
