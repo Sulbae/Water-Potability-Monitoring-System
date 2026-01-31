@@ -46,7 +46,7 @@ Nilai null/minssing value pada dataset ditemukan pada 3 variabel (dalam hal ini 
    ![histogram-distribusi-data](https://github.com/Sulbae/Water-Potability-Assessment/blob/708e8b6e1cb1403bfcd9e2c81d2ae869b7c9da90/assets/EDA/Distribusi%20Data%20Fitur.png)
 
    * Data setiap parameter terdistribusi normal, kecuali parameter Solids yang sedikit condong ke kiri / positive skewed (Mean > Median dan nilai max = 3x Median)
-   * Berdasarkan kelas targetnya, ternyata proporsi dataset diketahui tidak seimbang (imbalance). Untuk mengatasi ini, maka perlu penerapan weight balance pada proses pelatihan.
+   * Berdasarkan kelas targetnya, ternyata proporsi dataset diketahui tidak seimbang (imbalance). Untuk mengatasi ini, maka perlu penerapan weight balance pada proses pelatihan model klasifikasi.
 
 #### 2) Cek Outlier
    ![boxplot-outlier](https://github.com/Sulbae/Water-Potability-Assessment/blob/c6bf27c09814fc2e0b5e308ef1b01dd6a54a933b/assets/EDA/Outlier.png)
