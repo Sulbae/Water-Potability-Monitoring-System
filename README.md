@@ -102,10 +102,9 @@ Berdasarkan hasil temuan dari eksplorasi data, maka dilakukan Preprocessing Data
 $$
 x_{scaled} = \frac{x - \mu}{\sigma}
 $$
-   
-  Keterangan:
-  - μ = mean (nilai rata-rata) fitur 
-  - σ = standar deviasi fitur 
+  - Keterangan:
+    - μ = mean (nilai rata-rata) fitur 
+    - σ = standar deviasi fitur 
 
 ## **Model Development**
 ### **Classifier Model**
